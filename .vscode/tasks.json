@@ -10,13 +10,19 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                //FFmpeg库
                 "-ID:/FFmpeg/ffmpeg-7.0-fdk_aac/include",   //头文件
                 "-LD:/FFmpeg/ffmpeg-7.0-fdk_aac/lib",       //库文件
                 "-lavcodec",                                //库名
                 "-lavutil",
                 "-lavformat",
                 "-lswresample",
-                "-lavdevice"
+                "-lavdevice",
+                //opus库
+                "-ID:/FFmpeg/opus-1.5.2/build64/include/opus",   //头文件
+                "-LD:/FFmpeg/opus-1.5.2/build64/lib",       //库文件
+                "-lopus",                                //库名
+
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -31,12 +37,12 @@
             "detail": "调试器生成的任务。",
             
             "presentation": {
-                "echo": false,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared", //这里shared表示共享，改成new之后每个进程创建新的端口
-                "showReuseMessage": true,
-                "clear": false
+                // "echo": false,
+                // "reveal": "always",
+                // "focus": false,
+                // "panel": "shared", //这里shared表示共享，改成new之后每个进程创建新的端口
+                // "showReuseMessage": true,
+                // "clear": false
             }
         }
     ],

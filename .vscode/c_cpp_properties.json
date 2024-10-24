@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "D://FFmpeg//SDL-release-2.30.6//build64//include//SDL2",   //库文件位置
-                "D://FFmpeg//ffmpeg-7.0-fdk_aac//include"   //库文件位置
+                "D://FFmpeg//ffmpeg-7.0-fdk_aac//include",   //库文件位置
+                "D://FFmpeg//opus-1.5.2//build64//include//opus"
             ],
             "defines": [
                 "_DEBUG",
