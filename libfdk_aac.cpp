@@ -228,7 +228,6 @@ int main(int argc, char **argv)
     }
 
     fflush(out);
-    fflush(out2);
 
     //3.释放资源
     end_:
@@ -236,15 +235,16 @@ int main(int argc, char **argv)
     {
         fclose(out);
     }
-    if (out2)
-    {
-        fclose(out2);
-    }
     if(frame)
     {
         //释放frame后冲刷最后解码的数据，保证数据完整
         av_frame_free(&frame);
         Encodec(codec_ctx, frame, out2);
+        fflush(out2);
+    }
+    if(out2)
+    {
+        fclose(out2);
     }
     if(pkt)
     {

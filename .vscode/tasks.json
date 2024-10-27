@@ -11,8 +11,8 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 //FFmpeg库
-                "-ID:/FFmpeg/ffmpeg-7.0-fdk_aac/include",   //头文件
-                "-LD:/FFmpeg/ffmpeg-7.0-fdk_aac/lib",       //库文件
+                "-ID:/FFmpeg/ffmpeg-7.0-fdk_aac-libopus-libvps/include",   //头文件
+                "-LD:/FFmpeg/ffmpeg-7.0-fdk_aac-libopus-libvps/lib",       //库文件
                 "-lavcodec",                                //库名
                 "-lavutil",
                 "-lavformat",
